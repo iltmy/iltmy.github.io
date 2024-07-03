@@ -48,6 +48,7 @@
 
 <link rel="stylesheet" href="/css/main.css" />
 
+    <link rel="stylesheet" href="/css/_custom.css"> <!-- 引入自定义CSS -->
 <meta name="generator" content="Hexo 7.3.0"></head>
 <body>
     <div id="layout">
@@ -172,7 +173,7 @@
     <div class="content" v-pre>
         <h1 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h1><p>欢迎来到小张的休闲日常博客！这里是一个分享数学修仙日常的地方。</p>
 <h2 id="哔哩哔哩地址"><a href="#哔哩哔哩地址" class="headerlink" title="哔哩哔哩地址"></a>哔哩哔哩地址</h2><p>如果你喜欢我的内容，可以在哔哩哔哩上找到我，欢迎关注和互动：</p>
-<p><a target="_blank" rel="noopener" href="https://space.bilibili.com/%E4%BD%A0%E7%9A%84B%E7%AB%99UID">B站主页</a></p>
+<p><a target="_blank" rel="noopener" href="https://space.bilibili.com/435221511">B站主页</a></p>
 <h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h2><p>加入我们的QQ群，和其他数学爱好者一起讨论和交流：</p>
 <p>群号：123456789</p>
 <p>你可以通过扫描下方二维码加入QQ群：</p>
@@ -201,7 +202,7 @@
             &commat;qtsm
         </div>
         <div>
-            <a href="https://space.bilibili.com/your_user_id" target="_blank">访问我的哔哩哔哩</a>
+            <a href="https://space.bilibili.com/435221511" target="_blank">访问我的哔哩哔哩</a>
         </div>
         
     </div>
@@ -225,5 +226,38 @@
 
 
     
+
+    <!-- 添加网易云音乐播放器代码 -->
+    <div id="music-player">
+      <iframe id="music-iframe" frameborder="no" border="0" marginwidth="0" marginheight="0" width="200" height="66"></iframe>
+      <div id="toggle-button">隐藏</div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var musicPlayer = document.getElementById('music-player');
+        var toggleButton = document.getElementById('toggle-button');
+        var musicIframe = document.getElementById('music-iframe');
+
+        // 延迟加载播放器
+        setTimeout(function () {
+          musicIframe.src = "//music.163.com/outchain/player?type=2&id=1370886432&auto=1&height=66";
+          musicPlayer.style.display = 'block';
+        }, 1000); // 延迟1秒加载
+
+        toggleButton.addEventListener('click', function () {
+          if (musicPlayer.classList.contains('hidden')) {
+            musicPlayer.classList.remove('hidden');
+            toggleButton.innerText = '隐藏';
+          } else {
+            musicPlayer.classList.add('hidden');
+            toggleButton.innerText = '显示';
+          }
+        });
+      });
+    </script>
 </body>
 </html>
+
+
+
