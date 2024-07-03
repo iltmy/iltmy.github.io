@@ -8,16 +8,11 @@ const app = Vue.createApp({
             menuColor: false,
             scrollTop: 0,
             renderers: [],
-            isPlayerHidden: true, // 用于控制播放器显示隐藏
         };
     },
     created() {
         window.addEventListener("load", () => {
             this.loading = false;
-            // 延迟加载播放器
-            setTimeout(() => {
-                this.$refs.musicIframe.src = "//music.163.com/outchain/player?type=2&id=1370886432&auto=1&height=66";
-            }, 1000);
         });
     },
     mounted() {
@@ -42,9 +37,6 @@ const app = Vue.createApp({
                 else wrap.style.top = "-80px";
             }
             this.scrollTop = newScrollTop;
-        },
-        togglePlayer() {
-            this.isPlayerHidden = !this.isPlayerHidden;
         },
     },
 });

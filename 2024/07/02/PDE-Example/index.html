@@ -48,7 +48,6 @@
 
 <link rel="stylesheet" href="/css/main.css" />
 
-    <link rel="stylesheet" href="/css/_custom.css"> <!-- 引入自定义CSS -->
 <meta name="generator" content="Hexo 7.3.0"></head>
 <body>
     <div id="layout">
@@ -185,7 +184,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/PDE/" style="color: #ff7d73">
+                <a href="/tags/PDE/" style="color: #ffa2c4">
                     PDE
                 </a>
             </span>
@@ -242,36 +241,6 @@
 
 
     
-
-    <!-- 添加网易云音乐播放器代码 -->
-    <div id="music-player">
-      <iframe id="music-iframe" frameborder="no" border="0" marginwidth="0" marginheight="0" width="200" height="66"></iframe>
-      <div id="toggle-button">隐藏</div>
-    </div>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        var musicPlayer = document.getElementById('music-player');
-        var toggleButton = document.getElementById('toggle-button');
-        var musicIframe = document.getElementById('music-iframe');
-
-        // 延迟加载播放器
-        setTimeout(function () {
-          musicIframe.src = "//music.163.com/outchain/player?type=2&id=1370886432&auto=1&height=66";
-          musicPlayer.style.display = 'block';
-        }, 1000); // 延迟1秒加载
-
-        toggleButton.addEventListener('click', function () {
-          if (musicPlayer.classList.contains('hidden')) {
-            musicPlayer.classList.remove('hidden');
-            toggleButton.innerText = '隐藏';
-          } else {
-            musicPlayer.classList.add('hidden');
-            toggleButton.innerText = '显示';
-          }
-        });
-      });
-    </script>
 </body>
 </html>
 
