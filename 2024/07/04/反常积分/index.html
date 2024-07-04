@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>qtsm的数学修仙</title>
+    <title>反常积分 | qtsm的数学修仙</title>
     <meta name="author" content="qtsm" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -47,7 +47,9 @@
 
 
 
-<script src="/js/lib/home.js"></script>
+
+
+
 
 <link rel="stylesheet" href="/css/main.css" />
 
@@ -157,39 +159,17 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="home-head">
-    <div
-        id="home-background"
-        ref="homeBackground"
-        data-images="/images/background.jpg"
-    ></div>
-    <div id="home-info" @click="homeClick">
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="info">
-            <div class="wrap">
-                <h1>qtsm的数学修仙</h1>
-                <h3>学不会数学</h3>
-                <h5></h5>
-            </div>
-        </span>
+            <div class="article">
+    <div>
+        <h1>反常积分</h1>
     </div>
-</div>
-<div
-    id="home-posts-wrap"
-    ref="homePostsWrap"
-    true
->
-    <div id="home-posts">
-        
-
-<div class="post">
-    <a href="/2024/07/04/%E5%8F%8D%E5%B8%B8%E7%A7%AF%E5%88%86/">
-        <h2 class="post-title">反常积分</h2>
-    </a>
-    <div class="category-and-date">
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/7/4
+        </span>
         
         <span class="category">
             <a href="/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/">
@@ -200,19 +180,26 @@
             </a>
         </span>
         
-        <span class="date">
+        
+        <span class="tags">
             <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
+                <i class="fa-solid fa-tags fa-fw"></i>
             </span>
-            2024/7/4
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/%E5%88%86%E6%9E%90/" style="color: #ffa2c4">
+                    分析
+                </a>
+            </span>
+            
         </span>
         
-        
     </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <h1 id="反常积分"><a href="#反常积分" class="headerlink" title="反常积分"></a>反常积分</h1><h2 id="反常积分的概念"><a href="#反常积分的概念" class="headerlink" title="反常积分的概念"></a>反常积分的概念</h2><blockquote>
+    
+    <div class="content" v-pre>
+        <h1 id="反常积分"><a href="#反常积分" class="headerlink" title="反常积分"></a>反常积分</h1><h2 id="反常积分的概念"><a href="#反常积分的概念" class="headerlink" title="反常积分的概念"></a>反常积分的概念</h2><blockquote>
 <p>设函数 $f$ 定义在无穷区间 $[a,+\infty)$ 上,且在任何有限区间 $[a, u]$ 上可积. 如果存在极限<br>$$<br>\lim _{u \rightarrow+\infty} \int_a^u f(x) \mathrm{d} x&#x3D;J,<br>$$</p>
 <p>则称此极限 $J$ 为函数 $f$ 在 $[a,+\infty)$ 上的无穷限反常积分 (简称无穷积分), 记作<br>$$<br>J&#x3D;\int_a^{+\infty} f(x) \mathrm{d} x,<br>$$</p>
 <p>并称 $\int_a^{+\infty} f(x) \mathrm{d} x$ 收敛. 如果极限 (1) 不存在, 为方便起见, 亦称 $\int_a^{+\infty} f(x) \mathrm{d} x$ 发散.</p>
@@ -427,104 +414,13 @@
 <p>   同理,若 $f\left(x_1\right)&lt;0$, 亦有 $\left|\int_{x_1}^{x_1+\delta} f(x) \mathrm{d} x\right| \geqslant \frac{\varepsilon_0}{2} \delta$. 这就证明了: 对 $\frac{\varepsilon_0}{2} \delta&gt;0, \forall A$, $\exists x_1+\delta&gt;x_1&gt;A$, 使得 $\left|\int_{x_1}^{x_1+\delta} f(x) \mathrm{d} x\right| \geqslant \frac{\varepsilon_0}{2} \delta$. 根据 Cauchy 准则, 此即表明 $\int_a^{+\infty} f(x) \mathrm{d} x$发散,矛盾.</p>
 </blockquote>
 
-            
-        </div>
     </div>
-    <div class="post-tags">
-        
-        <span class="icon">
-            <i class="fa-solid fa-tags fa-fw"></i>
-        </span>
-        
-        
-        
-        <span class="tag">
-            
-            <a href="/tags/%E5%88%86%E6%9E%90/" style="color: #03a9f4">分析</a>
-        </span>
-        
-    </div>
-    <a href="/2024/07/04/%E5%8F%8D%E5%B8%B8%E7%A7%AF%E5%88%86/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2024/07/02/PDE-Example/">
-        <h2 class="post-title">PDE Example</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="category">
-            <a href="/categories/PDE/">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                PDE
-            </a>
-        </span>
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2024/7/2
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <h1 id="PDE-Example"><a href="#PDE-Example" class="headerlink" title="PDE Example"></a>PDE Example</h1><p>这是一个关于偏微分方程（PDE）的示例文章。</p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        <span class="icon">
-            <i class="fa-solid fa-tags fa-fw"></i>
-        </span>
-        
-        
-        
-        <span class="tag">
-            
-            <a href="/tags/PDE/" style="color: #ffa2c4">PDE</a>
-        </span>
-        
-    </div>
-    <a href="/2024/07/02/PDE-Example/" class="go-post">阅读全文</a>
-</div>
-
-
-        <div class="page-current">
     
-    <span class="current">1</span>
     
     
     
     
-</div>
-
-    </div>
     
-    <div id="home-card">
-        <div id="card-style">
-    <div id="card-div">
-        <div class="avatar">
-            <img src="/images/avatar.jpg" alt="avatar" />
-        </div>
-        <div class="name">qtsm</div>
-        <div class="description">
-            <p>从数学分析开始更新我的数学学习</p>
-
-        </div>
-        
-        
-    </div>
-</div>
-
-    </div>
     
 </div>
 
@@ -556,6 +452,12 @@
         
     </div>
     <script src="/js/main.js"></script>
+    
+    
+
+
+
+
     
 </body>
 </html>
