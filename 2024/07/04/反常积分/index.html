@@ -358,7 +358,7 @@
 <blockquote>
 <p><strong>证明：</strong>由条件设 $\left|\int_a^u f(x) \mathrm{d} x\right| \leqslant M, u \in[a,+\infty)$. 任给 $\varepsilon&gt;0$, 由于 $\lim _{x \rightarrow+\infty} g(x)&#x3D;0$, 因此存在 $G \geqslant a$, 当 $x&gt;G$ 时,有<br>$$<br>|g(x)|&lt;\frac{\varepsilon}{4 M}<br>$$</p>
 <p>又因 $g$ 为单调函数,利用积分第二中值定理的推论,对于任何 $u_2&gt;u_1&gt;$ $G$, 存在 $\xi \in\left[u_1, u_2\right]$, 使得<br>$$<br>\int_{u_1}^{u_2} f(x) g(x) \mathrm{d} x&#x3D;g\left(u_1\right) \int_{u_1}^{\xi} f(x) \mathrm{d} x+g\left(u_2\right) \int_{\xi}^{u_2} f(x) \mathrm{d} x .<br>$$</p>
-<p>于是有<br>$$<br>\begin{aligned}<br>\left|\int_{u_1}^{u_2} f(x) g(x) \mathrm{d} x\right| \leqslant &amp; \left|g\left(u_1\right)\right| \cdot\left|\int_{u_1}^{\xi} f(x) \mathrm{d} x\right|+\left|g\left(u_2\right)\right| \cdot\left|\int_{\xi}^{u_2} f(x) \mathrm{d} x\right| \<br>&#x3D; &amp; \left|g\left(u_1\right)\right| \cdot\left|\int_a^{\xi} f(x) \mathrm{d} x-\int_a^{n_1} f(x) \mathrm{d} x\right|+ \<br>&amp; \left|g\left(u_2\right)\right| \cdot\left|\int_a^{u_2} f(x) \mathrm{d} x-\int_a^{\xi} f(x) \mathrm{d} x\right| \<br>&amp; &lt;\frac{\varepsilon}{4 M} \cdot 2 M+\frac{\varepsilon}{4 M} \cdot 2 M&#x3D;\varepsilon .<br>\end{aligned}<br>$$</p>
+<p>于是有<br>$$<br>\begin{aligned}<br>\left|\int_{u_1}^{u_2} f(x) g(x) \mathrm{d} x\right| \leqslant &amp; \left|g\left(u_1\right)\right| \cdot\left|\int_{u_1}^{\xi} f(x) \mathrm{d} x\right|+\left|g\left(u_2\right)\right| \cdot\left|\int_{\xi}^{u_2} f(x) \mathrm{d} x\right| \\<br>&#x3D; &amp; \left|g\left(u_1\right)\right| \cdot\left|\int_a^{\xi} f(x) \mathrm{d} x-\int_a^{n_1} f(x) \mathrm{d} x\right|+ \\<br>&amp; \left|g\left(u_2\right)\right| \cdot\left|\int_a^{u_2} f(x) \mathrm{d} x-\int_a^{\xi} f(x) \mathrm{d} x\right| \\<br>&amp; &lt;\frac{\varepsilon}{4 M} \cdot 2 M+\frac{\varepsilon}{4 M} \cdot 2 M&#x3D;\varepsilon .<br>\end{aligned}<br>$$</p>
 <p>根据柯西准则, 证得 $\int_a^{+\infty} f(x) g(x) \mathrm{d} x$ 收敛.</p>
 </blockquote>
 <h4 id="阿贝尔-Abel-判别法"><a href="#阿贝尔-Abel-判别法" class="headerlink" title="阿贝尔 (Abel) 判别法"></a>阿贝尔 (Abel) 判别法</h4><blockquote>
@@ -439,6 +439,24 @@
         </div>
         
     </div>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true
+    },
+    "HTML-CSS": {
+      linebreaks: { automatic: false }
+    },
+    SVG: {
+      linebreaks: { automatic: false }
+    }
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </footer>
 
 

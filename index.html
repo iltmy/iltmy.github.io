@@ -190,259 +190,12 @@
         <h2 class="post-title">反常积分</h2>
     </a>
     <div class="category-and-date">
-        
-        <span class="category">
-            <a href="/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                数学分析
-            </a>
-        </span>
-        
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
             2024/7/4
         </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <h1 id="反常积分"><a href="#反常积分" class="headerlink" title="反常积分"></a>反常积分</h1><h2 id="反常积分的概念"><a href="#反常积分的概念" class="headerlink" title="反常积分的概念"></a>反常积分的概念</h2><blockquote>
-<p>设函数 $f$ 定义在无穷区间 $[a,+\infty)$ 上,且在任何有限区间 $[a, u]$ 上可积. 如果存在极限<br>$$<br>\lim _{u \rightarrow+\infty} \int_a^u f(x) \mathrm{d} x&#x3D;J,<br>$$</p>
-<p>则称此极限 $J$ 为函数 $f$ 在 $[a,+\infty)$ 上的无穷限反常积分 (简称无穷积分), 记作<br>$$<br>J&#x3D;\int_a^{+\infty} f(x) \mathrm{d} x,<br>$$</p>
-<p>并称 $\int_a^{+\infty} f(x) \mathrm{d} x$ 收敛. 如果极限 (1) 不存在, 为方便起见, 亦称 $\int_a^{+\infty} f(x) \mathrm{d} x$ 发散.</p>
-</blockquote>
-<ul>
-<li>积分的收敛于下线a的选取无关</li>
-<li>它其实表述的是与坐标围成的面积又一个界限</li>
-</ul>
-<h2 id="反常积分最重要的例子"><a href="#反常积分最重要的例子" class="headerlink" title="反常积分最重要的例子"></a>反常积分最重要的例子</h2><blockquote>
-<p>讨论无穷积分<br>$$<br>\int_1^{+\infty} \frac{\mathrm{d} x}{x^p}<br>$$<br>的敛散性</p>
-</blockquote>
-<p>从上面这个例子进一步写下面的习题例 4 讨论下列无穷积分的敛散性:</p>
-<ol>
-<li>$\int_2^{+\infty} \frac{\mathrm{d} x}{x(\ln x)^p}$;</li>
-<li>$\int_{-\infty}^{+\infty} \frac{\mathrm{d} x}{1+x^2}$.</li>
-</ol>
-<h2 id="瑕积分的概念"><a href="#瑕积分的概念" class="headerlink" title="瑕积分的概念"></a>瑕积分的概念</h2><blockquote>
-<p>设函数 $f$ 定义在区间 $(a, b]$ 上, 在点 $a$ 的任一右邻域上无界, 但在任何内闭区间 $[u, b] \subset(a, b]$ 上有界且可积. 如果存在极限<br>$$<br>\lim _{u \rightarrow a^{+}} \int_u^b f(x) \mathrm{d} x&#x3D;J,<br>$$</p>
-<p>则称此极限为无界函数 $f$ 在 $(a, b]$ 上的反常积分, 记作<br>$$<br>J&#x3D;\int_a^b f(x) \mathrm{d} x,<br>$$</p>
-<p>并称反常积分 $\int_a^b f(x) \mathrm{d} x$ 收敛. 如果极限不存在, 这时也说反常积分 $\int_a^b f(x) \mathrm{d} x$ 发散.</p>
-</blockquote>
-<p>请注意有些积分不为瑕积分而是正常积分比如</p>
-<ul>
-<li>$\int_{0}^{1}\frac{\sin x}{x} dx$</li>
-</ul>
-<h2 id="瑕积分中重要的例子"><a href="#瑕积分中重要的例子" class="headerlink" title="瑕积分中重要的例子"></a>瑕积分中重要的例子</h2><blockquote>
-<p>讨论瑕积分<br>$$<br>\int_0^1 \frac{\mathrm{d} x}{x^q}(q&gt;0)<br>$$</p>
-<p>的收敛性.</p>
-</blockquote>
-<p>作业: 考虑：</p>
-<ul>
-<li>$\int_0^{+\infty} \frac{\mathrm{d} x}{x^p}(p&gt;0)$.请问为什么不考虑$p&lt;0 $</li>
-</ul>
-<h2 id="进一步考虑"><a href="#进一步考虑" class="headerlink" title="进一步考虑"></a>进一步考虑</h2><p><strong>Q:对于抽象的函数我们如何判断它是否收敛呢</strong></p>
-<p><strong>回答1：</strong>首先应该回答模仿极限我们应该有柯西收敛准则</p>
-<h3 id="柯西收敛准则"><a href="#柯西收敛准则" class="headerlink" title="柯西收敛准则"></a>柯西收敛准则</h3><p>在引入之前我们应该想，这个反常积分是不是相当于变上限积分对上限取无穷处极限（当然我说的是无穷积分 因为瑕积分可以转换为无穷积分（换元！））那么我们有</p>
-<blockquote>
-<p>无穷积分 $\int_a^{+\infty} f(x) \mathrm{d} x$ 收敛的充要条件是: 任给 $\varepsilon&gt;0$, 存在 $G \geqslant a$, 只要 $u_1, u_2&gt;G$, 便有<br>$$<br>\left|\int_a^{u_2} f(x) \mathrm{d} x-\int_a^{u_1} f(x) \mathrm{d} x\right|&#x3D;\left|\int_{u_1}^{u_2} f(x) \mathrm{d} x\right|&lt;\varepsilon \text {. }<br>$$</p>
-</blockquote>
-<p><strong>回答2</strong>：我们可以得出一些性质</p>
-<h3 id="反常积分的性质"><a href="#反常积分的性质" class="headerlink" title="反常积分的性质"></a>反常积分的性质</h3><ul>
-<li>反常积分构成一个线性空间</li>
-<li>反常积分与前面的取值无关之和后面无穷部分有关（因为前面是个定积分）</li>
-</ul>
-<p>解释一下上面第一条为</p>
-<blockquote>
-<p> 若 $\int_a^{+\infty} f_1(x) \mathrm{d} x$ 与 $\int_a^{+\infty} f_2(x) \mathrm{d} x$ 都收敛, $k_1, k_2$ 为任意常数, 则 $\int_a^{+\infty}\left[k_1 f_1(x)+\right.$ $\left.k_2 f_2(x)\right] \mathrm{d} x$ 也收敛, 且<br>$$<br>\int_a^{+\infty}\left[k_1 f_1(x)+k_2 f_2(x)\right] \mathrm{d} x&#x3D;k_1 \int_a^{+\infty} f_1(x) \mathrm{d} x+k_2 \int_a^{+\infty} f_2(x) \mathrm{d} x .<br>$$</p>
-</blockquote>
-<p>第二条为</p>
-<blockquote>
-<p> 若 $f$ 在任何有限区间 $[a, u]$ 上可积, $a&lt;b$, 则 $\int_a^{+\infty} f(x) \mathrm{d} x$ 与 $\int_b^{+\infty} f(x) \mathrm{d} x$ 同敛态(即同时收敛或同时发散),且有<br>$$<br>\int_a^{+\infty} f(x) \mathrm{d} x&#x3D;\int_a^b f(x) \mathrm{d} x+\int_b^{+\infty} f(x) \mathrm{d} x,<br>$$</p>
-<p>其中右边第一项是定积分.</p>
-</blockquote>
-<p><strong>回答3：</strong>模仿极限的夹逼准则我们也有</p>
-<h3 id="比较判别法"><a href="#比较判别法" class="headerlink" title="比较判别法"></a>比较判别法</h3><p>先给出一个自己和自己有关的比较</p>
-<h4 id="条件收敛和绝对收敛"><a href="#条件收敛和绝对收敛" class="headerlink" title="条件收敛和绝对收敛"></a>条件收敛和绝对收敛</h4><blockquote>
-<p>若 $f$ 在任何有限区间 $[a, u]$ 上可积,且有 $\int_a^{+\infty}|f(x)| \mathrm{d} x$ 收敛, 则 $\int_a^{+\infty} f(x) \mathrm{d} x$亦必收敛,并有<br>$$<br>\left|\int_a^{+\infty} f(x) \mathrm{d} x\right| \leqslant \int_a^{+\infty}|f(x)| \mathrm{d} x .<br>$$</p>
-</blockquote>
-<blockquote>
-<p><strong>证明：</strong></p>
-<ol>
-<li>由 $\int_a^{+\infty}|f(x)| \mathrm{d} x$ 收敛, 根据柯西准则 (必要性), 任给 $\varepsilon&gt;0$, 存在 $G \geqslant a$, 当 $u_2&gt;u_1&gt;G$ 时, 总有</li>
-</ol>
-<p>$$<br>\left|\int_{u_1}^{u_2} | f(x)|\mathrm{d} x\right|&#x3D;\int_{u_1}^{u_2}|f(x)| \mathrm{d} x&lt;\varepsilon .<br>$$</p>
-<p>利用定积分的绝对值不等式, 又有<br>$$<br>\left|\int_{u_1}^{u_2} f(x) \mathrm{d} x\right| \leqslant \int_{u_1}^{u_2}|f(x)| \mathrm{d} x&lt;\varepsilon .<br>$$</p>
-<p>再由柯西准则(充分性), 证得 $\int_a^{+\infty} f(x) \mathrm{d} x$ 收敛.</p>
-<ol start="2">
-<li>又因 $\left|\int_0^u f(x) \mathrm{d} x\right| \leqslant \int_0^u|f(x)| \mathrm{d} x(u&gt;a)$, 令 $u \rightarrow+\infty$ 取极限, 立刻得到不等式</li>
-</ol>
-</blockquote>
-<hr>
-<p>我们可以利用一些不等式来建立比较，这里我们考虑非负的情况，那变号的情况如何考虑呢，看上面我们首先给出了它和它的绝对值之前的关系，我们可以处理一些问题另外的问题我们可以通过A-D判别法来处理！</p>
-<h4 id="比较原则的一般形式"><a href="#比较原则的一般形式" class="headerlink" title="比较原则的一般形式"></a>比较原则的一般形式</h4><blockquote>
-<p> 设定义在 $[a,+\infty$ ) 上的两个<strong>非负</strong>函数 $f$ 和 $g$ 都在任何有限区间 $[a, u]$ 上可积,且满足<br>$$<br>f(x) \leqslant g(x), x \in[a,+\infty),<br>$$</p>
-<p>则当 $\int_a^{+\infty} g(x) \mathrm{d} x$ 收敛时, $\int_0^{+\infty} f(x) \mathrm{d} x$ 必收敛（或当 $\int_0^{+\infty} f(x) \mathrm{d} x$ 发散时, $\int_a^{+\infty} g(x) \mathrm{d} x$必发散）</p>
-</blockquote>
-<p>再次说明这里要求非负 非负！！！，证明的话用一下给出的柯西收敛以及带入不等式。</p>
-<p><strong>讨论</strong>：$\int_0^{+\infty} \frac{\sin x}{1+x^2} \mathrm{d} x$ 的敛散性.</p>
-<p><strong>pf</strong>:解 由于 $\left|\frac{\sin x}{1+x^2}\right| \leqslant \frac{1}{1+x^2}, x \in[0,+\infty)$, 以及 $\int_0^{+\infty} \frac{\mathrm{d} x}{1+x^2}&#x3D;\frac{\pi}{2}$ 收敛根据比较原则知 $\int_0^{+\infty} \frac{\sin x}{1+x^2} \mathrm{d} x$ 绝对收敛.</p>
-<p>我们这里给出一个口诀：<strong>大收敛小收敛，小发散大发散</strong>，</p>
-<hr>
-<p>往往比较判别法用起来非常困难，因为要构造一个不等式岂不是很困难，这里我们想到如果他俩的比是一个常数阶（$O(1)$）那么他们之间是不是可以存在一个不等式的关系（因为他们的比是一个常数的话可以乘过来）那么我们有</p>
-<h4 id="比较原则的极限形式"><a href="#比较原则的极限形式" class="headerlink" title="比较原则的极限形式"></a>比较原则的极限形式</h4><blockquote>
-<p> 若 $f$ 和 $g$ 都在任何有限区间 $[a, u]$ 上可积, 当 $x \in[a,+\infty)$ 时, $f(x) \geqslant 0$, $g(x)&gt;0$, 且 $\lim _{x \rightarrow+\infty} \frac{f(x)}{g(x)}&#x3D;c$ 则有:</p>
-<ol>
-<li>当 $0&lt;c&lt;+\infty$ 时, $\int_a^{+\infty} f(x) \mathrm{d} x$ 与 $\int_a^{+\infty} g(x) \mathrm{d} x$ 同敛态;</li>
-<li>当 $c&#x3D;0$ 时,由 $\int_a^{+\infty} g(x) \mathrm{d} x$ 收敛可推知 $\int_a^{+\infty} f(x) \mathrm{d} x$ 也收敛;</li>
-<li>当 $c&#x3D;+\infty$ 时, 由 $\int_a^{+\infty} g(x) \mathrm{d} x$ 发散可推知 $\int_a^{+\infty} f(x) \mathrm{d} x$ 也发散.</li>
-</ol>
-</blockquote>
-<p>当然这里的比较对象一般如何寻找呢？首先给出一个重要的比较对象，</p>
-<blockquote>
-<p>设 $f$ 定义于 $[a,+\infty)(a&gt;0)$, 且在任何有限区间 $[a, u]$ 上可积, 则有:</p>
-<ol>
-<li>当 $0 \leqslant f(x) \leqslant \frac{1}{x^p}, x \in[a,+\infty)$, 且 $p&gt;1$ 时, $\int_a^{+\infty} f(x) \mathrm{d} x$ 收敛;</li>
-<li>当 $f(x) \geqslant \frac{1}{x^p}, x \in[a,+\infty)$, 且 $p \leqslant 1$ 时, $\int_a^{+\infty} f(x) \mathrm{d} x$ 发散.</li>
-</ol>
-</blockquote>
-<p>为什么这么重要呢，因为我们在求极限的时候喜欢干的一件事情就是估阶，那么他的多项式多少次就是他的多项式阶，所以比较重要！！</p>
-<p><strong>给出一个例子</strong></p>
-<blockquote>
-<p> 讨论下列无穷限积分的敛散性:</p>
-<ol>
-<li>$\int_1^{+\infty} x^\alpha \mathrm{e}^{-x} \mathrm{d} x$;</li>
-<li>$\int_0^{+\infty} \frac{x^2}{\sqrt{x^5+1}} \mathrm{d} x$.</li>
-</ol>
-</blockquote>
-<p>当然比较对象的选取不一定要用多项式于是，这里我们给出无穷的比较链</p>
-<blockquote>
-<p>$\ln{\ln(n)}&lt;&lt;\ln n &lt;&lt; n^{\alpha}&lt;n^k&lt;a^n&lt;&lt;n!&lt;&lt;n^n$</p>
-<p>这里要求$0&lt;\alpha &lt;1,k&gt;1,a&gt;1$</p>
-<p>当然函数也是成立一部分，比如$e^x$远远大于$x^a$总结就是<strong>指&gt;密&gt;对数</strong>，这里我们可以想到$\ln x$约等于$x^{0.000001}$(哈哈哈哈 很小很小但是又趋于无穷很大很大)</p>
-</blockquote>
-<p>总结一下就是</p>
-<blockquote>
-<ol>
-<li>对任意的 $\alpha&gt;0$, 都有 $\lim _{x \rightarrow 0^{+}} x^\alpha \ln x&#x3D;0$;</li>
-<li>对任意的 $\alpha&gt;0$, 都有 $\lim _{x \rightarrow+\infty} \frac{\ln x}{x^\alpha}&#x3D;0$;</li>
-<li>对任意的 $\alpha&gt;0$, 都有 $\lim _{x \rightarrow+\infty} x^\alpha e^{-x}&#x3D;0$.</li>
-</ol>
-</blockquote>
-<p>这里要多讲一点比较的问题于是有下面的问题</p>
-<blockquote>
-<ul>
-<li>$\int_0^{+\infty} \frac{\mathrm{d} x}{\sqrt[3]{x^4+1}}$;</li>
-<li>$\int_0^{\frac{\pi}{2}} \frac{1-\cos x}{x^p} \mathrm{d} x$;</li>
-<li>$\int_0^{+\infty} \frac{x \arctan x}{1+x^p} \mathrm{d} x$;</li>
-<li>$\int_0^{+\infty} \frac{\mathrm{d} x}{x^p+x^q}$;</li>
-<li>$\int_0^{+\infty} \frac{x^p}{1+x^q} \mathrm{d} x$.</li>
-</ul>
-</blockquote>
-<p>以及</p>
-<blockquote>
-<ol>
-<li>$\int_0^{+\infty} \frac{x}{1-e^x} \mathrm{d} x$;</li>
-<li>$\int_0^{+\infty} \frac{\ln (1+x)}{x^p} \mathrm{d} x$;</li>
-<li>$\int_0^{+\infty} \frac{\ln x}{e^x} \mathrm{d} x$.</li>
-</ol>
-</blockquote>
-<p>我们讲解一个比较复杂的上面的留做习题</p>
-<blockquote>
-<p>讨论反常积分 $\int_3^{+\infty} \frac{\mathrm{d} x}{x^p(\ln x)^q(\ln \ln x)^r}$ 的敛散性.</p>
-</blockquote>
-<blockquote>
-<p>讨论无穷积分 $\int_1^{+\infty} \frac{\cos x \sin \frac{1}{x}}{x} \mathrm{d} x$ 的收敛性.</p>
-</blockquote>
-<blockquote>
-<p>讨论无穷积分 $\int_1^{+\infty}\left[\frac{1}{x^p}-\ln \left(1+\frac{1}{x^p}\right)\right] \mathrm{d} x$ 的收敛性.</p>
-</blockquote>
-<p>证明：当$p&lt;0$的时候选$\ln \left(1+\frac{1}{x^p}\right)$为比较对象</p>
-<h3 id="A-D判别法"><a href="#A-D判别法" class="headerlink" title="A-D判别法"></a>A-D判别法</h3><h4 id="狄利克雷判别法"><a href="#狄利克雷判别法" class="headerlink" title="狄利克雷判别法"></a>狄利克雷判别法</h4><blockquote>
-<p> $F(u)&#x3D;\int_a^u f(x) \mathrm{d} x$ 在 $[a,+\infty$ ) 上有界,</p>
-<p> $g(x)$ 在 $[a,+\infty)$ 上当 $x \rightarrow+\infty$ 时单调趋于 0 ,</p>
-<p><strong>结论</strong>： $\int_a^{+\infty} f(x) g(x) \mathrm{d} x$ 收敛.</p>
-</blockquote>
-<blockquote>
-<p><strong>证明：</strong>由条件设 $\left|\int_a^u f(x) \mathrm{d} x\right| \leqslant M, u \in[a,+\infty)$. 任给 $\varepsilon&gt;0$, 由于 $\lim _{x \rightarrow+\infty} g(x)&#x3D;0$, 因此存在 $G \geqslant a$, 当 $x&gt;G$ 时,有<br>$$<br>|g(x)|&lt;\frac{\varepsilon}{4 M}<br>$$</p>
-<p>又因 $g$ 为单调函数,利用积分第二中值定理的推论,对于任何 $u_2&gt;u_1&gt;$ $G$, 存在 $\xi \in\left[u_1, u_2\right]$, 使得<br>$$<br>\int_{u_1}^{u_2} f(x) g(x) \mathrm{d} x&#x3D;g\left(u_1\right) \int_{u_1}^{\xi} f(x) \mathrm{d} x+g\left(u_2\right) \int_{\xi}^{u_2} f(x) \mathrm{d} x .<br>$$</p>
-<p>于是有<br>$$<br>\begin{aligned}<br>\left|\int_{u_1}^{u_2} f(x) g(x) \mathrm{d} x\right| \leqslant &amp; \left|g\left(u_1\right)\right| \cdot\left|\int_{u_1}^{\xi} f(x) \mathrm{d} x\right|+\left|g\left(u_2\right)\right| \cdot\left|\int_{\xi}^{u_2} f(x) \mathrm{d} x\right| \<br>&#x3D; &amp; \left|g\left(u_1\right)\right| \cdot\left|\int_a^{\xi} f(x) \mathrm{d} x-\int_a^{n_1} f(x) \mathrm{d} x\right|+ \<br>&amp; \left|g\left(u_2\right)\right| \cdot\left|\int_a^{u_2} f(x) \mathrm{d} x-\int_a^{\xi} f(x) \mathrm{d} x\right| \<br>&amp; &lt;\frac{\varepsilon}{4 M} \cdot 2 M+\frac{\varepsilon}{4 M} \cdot 2 M&#x3D;\varepsilon .<br>\end{aligned}<br>$$</p>
-<p>根据柯西准则, 证得 $\int_a^{+\infty} f(x) g(x) \mathrm{d} x$ 收敛.</p>
-</blockquote>
-<h4 id="阿贝尔-Abel-判别法"><a href="#阿贝尔-Abel-判别法" class="headerlink" title="阿贝尔 (Abel) 判别法"></a>阿贝尔 (Abel) 判别法</h4><blockquote>
-<p>若 $\int_a f(x) \mathrm{d} x$ 收敛,</p>
-<p> $g(x)$ 在 $[a,+\infty$ ) 上单调有界, </p>
-<p><strong>则</strong> $\int_a^{+\infty} f(x) g(x) \mathrm{d} x$ 收敛.</p>
-</blockquote>
-<h4 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h4><blockquote>
-<p>讨论 $\int_1^{+\infty} \frac{\sin x}{x^p} \mathrm{d} x$ 与 $\int_1^{+\infty} \frac{\cos x}{x^p} \mathrm{d} x(p&gt;0)$ 的敛散性.注意绝对收敛</p>
-</blockquote>
-<blockquote>
-<ol>
-<li>当 $p&gt;1$ 时, $\int_1^{+\infty} \frac{\sin x}{x^p} \mathrm{d} x$ 绝对收敛. 这是因为</li>
-</ol>
-<p>$$<br>\left|\frac{\sin x}{x^p}\right| \leqslant \frac{1}{x^p}, x \in[1,+\infty) \text {. }<br>$$</p>
-<p>而 $\int_1^{+\infty} \frac{\mathrm{d} x}{x^p}$ 当 $p&gt;1$ 时收敛,故由比较原则推知 $\int_1^{+\infty}\left|\frac{\sin x}{x^p}\right| \mathrm{d} x$ 收敛.</p>
-<ol start="2">
-<li>当 $0&lt;p \leqslant 1$ 时, $\int_1^{+\infty} \frac{\sin x}{x^p} \mathrm{d} x$ 条件收敛. 这是因为对任意 $u \geqslant 1$, 有 $\left|\int_1^u \sin x \mathrm{d} x\right|&#x3D;$ $|\cos 1-\cos u| \leqslant 2$, 而 $\frac{1}{x^p}$ 当 $p&gt;0$ 时单调趋于 $0(x \rightarrow+\infty)$, 故由狄利克雷判别法推知 $\int_1^{+\infty} \frac{\sin x}{x^p} \mathrm{d} x$ 当 $p&gt;0$ 时总是收敛的.</li>
-<li>另一方面, 由于</li>
-</ol>
-<p>$$<br>\left|\frac{\sin x}{x^p}\right| \geqslant \frac{\sin ^2 x}{x}&#x3D;\frac{1}{2 x}-\frac{\cos 2 x}{2 x}, x \in[1,+\infty),<br>$$</p>
-<p>其中 $\int_1^{+\infty} \frac{\cos 2 x}{2 x} \mathrm{d} x&#x3D;\frac{1}{2} \int_2^{+\infty} \frac{\cos t}{t} \mathrm{d} t$ 满足狄利克雷判别条件, 是收敛的. 而 $\int_1^{+\infty} \frac{\mathrm{d} x}{2 x}$ 是发散的,因此当 $0&lt;p \leqslant 1$ 时该无穷积分不是绝对收敛的,所以它是条件收敛的.</p>
-</blockquote>
-<p>作业：证明下列无穷积分都是条件收敛的:<br>$$<br>\int_1^{+\infty} \sin x^2 \mathrm{d} x, \int_1^{+\infty} \cos x^2 \mathrm{d} x, \int_1^{+\infty} x \sin x^4 \mathrm{d} x \text {. }<br>$$</p>
-<h3 id="通过这些我们可以知道的一些性质"><a href="#通过这些我们可以知道的一些性质" class="headerlink" title="通过这些我们可以知道的一些性质"></a>通过这些我们可以知道的一些性质</h3><blockquote>
-<p>举例说明: $\int_a^{+\infty} f(x) \mathrm{d} x$ 收敛时, $\int_a^{+\infty} f^2(x) \mathrm{d} x$ 不一定收敛: $\int_a^{+\infty} f(x) \mathrm{d} x$ 绝对收敛时, $\int_a^{+\infty} f^2(x) \mathrm{d} x$ 也不一定收敛.</p>
-</blockquote>
-<p>利用ad判别法以及条件收敛来构造后面的</p>
-<blockquote>
-<p>如 $\int_0^1 \frac{1}{\sqrt{x}} \mathrm{d} x$ 收敛, 但是 $\int_0^1 \frac{1}{x} \mathrm{d} x$ 却发散.</p>
-</blockquote>
-<blockquote>
-<p> 例如 $\int_0^{+\infty} \frac{\sin x}{x^{\frac{3}{2}}} \mathrm{d} x$ 绝对收敛(0处等价), 但是 $\int_0^{+\infty} \frac{\sin ^2 x}{x^3} \mathrm{d} x$ 却发散.</p>
-</blockquote>
-<h3 id="最后讨论一下收敛的反常积分在无穷远处的阶"><a href="#最后讨论一下收敛的反常积分在无穷远处的阶" class="headerlink" title="最后讨论一下收敛的反常积分在无穷远处的阶"></a>最后讨论一下收敛的反常积分在无穷远处的阶</h3><blockquote>
-<p>若 $f(x)$ 在 $[a,+\infty)$ 上单调, 且 $\int_a^{+\infty} f(x) \mathrm{d} x$ 收敛, 则当 $x \rightarrow+\infty$ 时, $f(x)$ 趋于 0 .</p>
-</blockquote>
-<blockquote>
-<p> 若 $\int_0^{+\infty} f(x) \mathrm{d} x$ 绝对收敛, 且 $\lim _{x \rightarrow+\infty} f(x)&#x3D;0$, 则 $\int_0^{+\infty} f^2(x) \mathrm{d} x$ 必定收敛.</p>
-</blockquote>
-<blockquote>
-<p>若 $f$ 在 $[a,+\infty)$ 上一致连续, 且 $\int_0^{+\infty} f(x) \mathrm{d} x$ 收敛, 则 $\lim _{x \rightarrow+\infty} f(x)&#x3D;0$.</p>
-</blockquote>
-<blockquote>
-<p> 证明：如果不成立那么有</p>
-<ol>
-<li>若当 $x \rightarrow+\infty$ 时, $f(x) \nrightarrow 0$, 则 $\exists \varepsilon_0&gt;0$, 使得 $\forall A&gt;0, \exists x_1&gt;A$ : $\left|f\left(x_1\right)\right| \geqslant \varepsilon_0$. 又因为 $f(x)$ 在 $[a,+\infty)$ 上一致连续, 对 $\frac{\varepsilon_0}{2}&gt;0, \exists \delta&gt;0$, 当 $\left|x^{\prime}-x^{\prime \prime}\right|&lt;$ $\delta$ 时, 有 $\left|f\left(x^{\prime}\right)-f\left(x^{\prime \prime}\right)\right|&lt;\frac{\varepsilon_0}{2}$. 故当 $x \in\left[x_1, x_1+\delta\right]$ 时, 有<br>$$<br>|f(x)| \geqslant|| f\left(x_1\right)|-| f\left(x_1\right)-f(x)||&gt;\frac{\varepsilon_0}{2},<br>$$</li>
-</ol>
-<p>​        并且 $f(x)$ 与 $f\left(x_1\right)$ 同号 (因为不然的话, $\left|f(x)-f\left(x_1\right)\right|&gt;\varepsilon_0$, 与一致连续定义矛盾)</p>
-<ol start="2">
-<li>若 $f\left(x_1\right)&gt;0$, 则 $f(x)&gt;0$. 从而由式 $(1)$ 知 $f(x)&gt;\frac{\varepsilon_0}{2}$, 故<br>   $$<br>   \left|\int_{x_1}^{x_1+\delta} f(x) \mathrm{d} x\right| \geqslant \frac{\varepsilon_0}{2} \int_{x_1}^{x_1+\delta} \mathrm{d} x&#x3D;\frac{\varepsilon_0}{2} \delta \text {. }<br>   $$</li>
-</ol>
-<p>   同理,若 $f\left(x_1\right)&lt;0$, 亦有 $\left|\int_{x_1}^{x_1+\delta} f(x) \mathrm{d} x\right| \geqslant \frac{\varepsilon_0}{2} \delta$. 这就证明了: 对 $\frac{\varepsilon_0}{2} \delta&gt;0, \forall A$, $\exists x_1+\delta&gt;x_1&gt;A$, 使得 $\left|\int_{x_1}^{x_1+\delta} f(x) \mathrm{d} x\right| \geqslant \frac{\varepsilon_0}{2} \delta$. 根据 Cauchy 准则, 此即表明 $\int_a^{+\infty} f(x) \mathrm{d} x$发散,矛盾.</p>
-</blockquote>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        <span class="icon">
-            <i class="fa-solid fa-tags fa-fw"></i>
-        </span>
-        
-        
-        
-        <span class="tag">
-            
-            <a href="/tags/%E5%88%86%E6%9E%90/" style="color: #03a9f4">分析</a>
-        </span>
-        
     </div>
     <a href="/2024/07/04/%E5%8F%8D%E5%B8%B8%E7%A7%AF%E5%88%86/" class="go-post">阅读全文</a>
 </div>
@@ -452,46 +205,12 @@
         <h2 class="post-title">PDE Example</h2>
     </a>
     <div class="category-and-date">
-        
-        <span class="category">
-            <a href="/categories/PDE/">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                PDE
-            </a>
-        </span>
-        
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
             2024/7/2
         </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <h1 id="PDE-Example"><a href="#PDE-Example" class="headerlink" title="PDE Example"></a>PDE Example</h1><p>这是一个关于偏微分方程（PDE）的示例文章。</p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        <span class="icon">
-            <i class="fa-solid fa-tags fa-fw"></i>
-        </span>
-        
-        
-        
-        <span class="tag">
-            
-            <a href="/tags/PDE/" style="color: #ffa2c4">PDE</a>
-        </span>
-        
     </div>
     <a href="/2024/07/02/PDE-Example/" class="go-post">阅读全文</a>
 </div>
@@ -543,6 +262,24 @@
         </div>
         
     </div>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true
+    },
+    "HTML-CSS": {
+      linebreaks: { automatic: false }
+    },
+    SVG: {
+      linebreaks: { automatic: false }
+    }
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </footer>
 
 

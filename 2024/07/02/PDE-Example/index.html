@@ -189,7 +189,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/PDE/" style="color: #03a9f4">
+                <a href="/tags/PDE/" style="color: #ffa2c4">
                     PDE
                 </a>
             </span>
@@ -199,7 +199,7 @@
     </div>
     
     <div class="content" v-pre>
-        <h1 id="PDE-Example"><a href="#PDE-Example" class="headerlink" title="PDE Example"></a>PDE Example</h1><p>这是一个关于偏微分方程（PDE）的示例文章。</p>
+        <h1 id="PDE-Example"><a href="#PDE-Example" class="headerlink" title="PDE Example"></a>PDE Example</h1><p>这是一个关于偏微分方程（PDE）的示例文章。<br>( \begin{array}{l}<br>a + b &#x3D; c \\<br>d + e &#x3D; f<br>\end{array} )</p></p>
 
     </div>
     
@@ -226,6 +226,24 @@
         </div>
         
     </div>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true
+    },
+    "HTML-CSS": {
+      linebreaks: { automatic: false }
+    },
+    SVG: {
+      linebreaks: { automatic: false }
+    }
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </footer>
 
 
