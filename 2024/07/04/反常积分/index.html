@@ -159,47 +159,49 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div class="article">
-    <div>
+            <div class="content-container">
+    <aside class="post-toc">
+        <nav id="toc"></nav>
+    </aside>
+    <div class="article">
         <h1>反常积分</h1>
-    </div>
-    <div class="info">
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2024/7/4
-        </span>
-        
-        <span class="category">
-            <a href="/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/">
+        <div class="info">
+            <span class="date">
                 <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                    <i class="fa-solid fa-calendar fa-fw"></i>
                 </span>
-                数学分析
-            </a>
-        </span>
-        
-        
-        <span class="tags">
-            <span class="icon">
-                <i class="fa-solid fa-tags fa-fw"></i>
+                2024/7/4
             </span>
             
-            
-            <span class="tag">
-                
-                <a href="/tags/%E5%88%86%E6%9E%90/" style="color: #ffa2c4">
-                    分析
+            <span class="category">
+                <a href="/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/">
+                    <span class="icon">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </span>
+                    数学分析
                 </a>
             </span>
             
-        </span>
+            
+            <span class="tags">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                
+                
+                <span class="tag">
+                    
+                    <a href="/tags/%E5%88%86%E6%9E%90/" style="color: #00a596">
+                        分析
+                    </a>
+                </span>
+                
+            </span>
+            
+        </div>
         
-    </div>
-    
-    <div class="content" v-pre>
-        <h1 id="反常积分"><a href="#反常积分" class="headerlink" title="反常积分"></a>反常积分</h1><h2 id="反常积分的概念"><a href="#反常积分的概念" class="headerlink" title="反常积分的概念"></a>反常积分的概念</h2><blockquote>
+        <div class="content" v-pre>
+            <h1 id="反常积分"><a href="#反常积分" class="headerlink" title="反常积分"></a>反常积分</h1><h2 id="反常积分的概念"><a href="#反常积分的概念" class="headerlink" title="反常积分的概念"></a>反常积分的概念</h2><blockquote>
 <p>设函数 $f$ 定义在无穷区间 $[a,+\infty)$ 上,且在任何有限区间 $[a, u]$ 上可积. 如果存在极限<br>$$<br>\lim _{u \rightarrow+\infty} \int_a^u f(x) \mathrm{d} x&#x3D;J,<br>$$</p>
 <p>则称此极限 $J$ 为函数 $f$ 在 $[a,+\infty)$ 上的无穷限反常积分 (简称无穷积分), 记作<br>$$<br>J&#x3D;\int_a^{+\infty} f(x) \mathrm{d} x,<br>$$</p>
 <p>并称 $\int_a^{+\infty} f(x) \mathrm{d} x$ 收敛. 如果极限 (1) 不存在, 为方便起见, 亦称 $\int_a^{+\infty} f(x) \mathrm{d} x$ 发散.</p>
@@ -414,14 +416,15 @@
 <p>   同理,若 $f\left(x_1\right)&lt;0$, 亦有 $\left|\int_{x_1}^{x_1+\delta} f(x) \mathrm{d} x\right| \geqslant \frac{\varepsilon_0}{2} \delta$. 这就证明了: 对 $\frac{\varepsilon_0}{2} \delta&gt;0, \forall A$, $\exists x_1+\delta&gt;x_1&gt;A$, 使得 $\left|\int_{x_1}^{x_1+\delta} f(x) \mathrm{d} x\right| \geqslant \frac{\varepsilon_0}{2} \delta$. 根据 Cauchy 准则, 此即表明 $\int_a^{+\infty} f(x) \mathrm{d} x$发散,矛盾.</p>
 </blockquote>
 
+        </div>
+        
+        
+        
+        
+        
+        
+        
     </div>
-    
-    
-    
-    
-    
-    
-    
 </div>
 
             <footer id="footer">

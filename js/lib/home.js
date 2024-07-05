@@ -12,3 +12,8 @@ mixins.home = {
         },
     },
 };
+document.addEventListener("DOMContentLoaded", function() {
+    if (document.querySelector(".article")) {
+        document.body.classList.add("article-page");
+    }
+});

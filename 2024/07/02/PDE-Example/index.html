@@ -159,56 +159,59 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div class="article">
-    <div>
+            <div class="content-container">
+    <aside class="post-toc">
+        <nav id="toc"></nav>
+    </aside>
+    <div class="article">
         <h1>PDE Example</h1>
-    </div>
-    <div class="info">
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2024/7/2
-        </span>
-        
-        <span class="category">
-            <a href="/categories/PDE/">
+        <div class="info">
+            <span class="date">
                 <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                    <i class="fa-solid fa-calendar fa-fw"></i>
                 </span>
-                PDE
-            </a>
-        </span>
-        
-        
-        <span class="tags">
-            <span class="icon">
-                <i class="fa-solid fa-tags fa-fw"></i>
+                2024/7/2
             </span>
             
-            
-            <span class="tag">
-                
-                <a href="/tags/PDE/" style="color: #ffa2c4">
+            <span class="category">
+                <a href="/categories/PDE/">
+                    <span class="icon">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </span>
                     PDE
                 </a>
             </span>
             
-        </span>
+            
+            <span class="tags">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                
+                
+                <span class="tag">
+                    
+                    <a href="/tags/PDE/" style="color: #00a596">
+                        PDE
+                    </a>
+                </span>
+                
+            </span>
+            
+        </div>
+        
+        <div class="content" v-pre>
+            <h1 id="PDE-Example"><a href="#PDE-Example" class="headerlink" title="PDE Example"></a>PDE Example</h1><p>这是一个关于偏微分方程（PDE）的示例文章。<br>( \begin{array}{l}<br>a + b &#x3D; c \\<br>d + e &#x3D; f<br>\end{array} )</p></p>
+
+        </div>
+        
+        
+        
+        
+        
+        
         
     </div>
-    
-    <div class="content" v-pre>
-        <h1 id="PDE-Example"><a href="#PDE-Example" class="headerlink" title="PDE Example"></a>PDE Example</h1><p>这是一个关于偏微分方程（PDE）的示例文章。<br>( \begin{array}{l}<br>a + b &#x3D; c \\<br>d + e &#x3D; f<br>\end{array} )</p></p>
-
-    </div>
-    
-    
-    
-    
-    
-    
-    
 </div>
 
             <footer id="footer">
